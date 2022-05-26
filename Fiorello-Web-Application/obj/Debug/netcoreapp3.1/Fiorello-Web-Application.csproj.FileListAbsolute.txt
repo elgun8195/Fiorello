@@ -146,3 +146,11 @@ C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debu
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ProductPartial.cshtml.g.cs
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\products\Default.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\_ViewImports.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\_ViewStart.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Category\Index.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Category\Detail.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Category\Update.cshtml.g.cs

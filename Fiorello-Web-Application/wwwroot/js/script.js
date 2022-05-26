@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    let skip = 4;
+    let skip = 2;
     $(document).on("click", "#loddd", function () {
         let ProductCount = $("#ProductCount").val();
         $.ajax({
             method: "get",
             url: "product/loadmore?skip= " + skip,
             success: function (res) {
-                skip += 8;
+                skip += 2;
                 $("#listproduct").append(res)
                 if (skip >= ProductCount) {
                     $("#loddd").remove();

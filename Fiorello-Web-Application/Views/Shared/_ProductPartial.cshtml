@@ -1,7 +1,6 @@
-﻿@model IEnumerable<Product>
- @foreach (var item in Model)
+﻿@model List<Product>
+ @foreach (Product item in Model)
             {
-
                 <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="product-item text-center" data-id="@item.Category.Name.ToLower()">
                         <div class="img">
@@ -14,7 +13,7 @@
                         </div>
                         <div class="price">
                             <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$@item.Price</span>
+                            <span class="text-black-50">$@item.Price.ToString("f2")</span>
                         </div>
                     </div>
                 </div>

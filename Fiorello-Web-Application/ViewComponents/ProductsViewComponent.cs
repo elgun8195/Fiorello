@@ -17,7 +17,7 @@ namespace Fiorello_Web_Application.ViewComponents
     }
         public async Task<IViewComponentResult> IncokeAsync()
         {
-            List<Product> products=_context.Products.Include(p=>p.Category).Take(8).ToList();
+            List<Product> products=_context.Products.Include(p=>p.Category).Take(2).ToList();
             return View(await Task.FromResult(products));
         } 
     }

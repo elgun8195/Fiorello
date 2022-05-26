@@ -43,6 +43,9 @@ namespace Fiorello_Web_Application
             app.UseStaticFiles();
             app.UseEndpoints(endpoints =>
             {
+            endpoints.MapControllerRoute(
+                 "areas",
+                 "{area:exists}/{controller=dashboard}/{action=Index}/{id?}");
                 endpoints.MapDefaultControllerRoute();
 
             });

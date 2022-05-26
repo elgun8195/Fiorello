@@ -18,13 +18,13 @@ namespace Fiorello_Web_Application.Controllers
         public IActionResult Index()
         {
             ViewBag.ProductCount = _context.Products.Count();
-            List<Product> products = _context.Products.Include(p=>p.Category).OrderByDescending(p=>p.Id).Take(4).ToList();
+            List<Product> products = _context.Products.Include(p=>p.Category).OrderByDescending(p=>p.Id).Take(2).ToList();
             return View(products);
             
         }
         public IActionResult LoadMore(int skip)
         {
-            List<Product> product=_context.Products.Include(p=>p.Category).Skip(skip).Take(4).ToList();
+            List<Product> product=_context.Products.Include(p=>p.Category).Skip(skip).Take(2).ToList();
             return PartialView("_ProductPartial",product);
         }
     }

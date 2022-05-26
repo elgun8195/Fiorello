@@ -5,7 +5,7 @@ namespace Fiorello_Web_Application.DAL
 {
     public class AppDbContext: DbContext
     {
-        public AppDbContext(DbContextOptions options):base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
 
         }
@@ -13,6 +13,8 @@ namespace Fiorello_Web_Application.DAL
         public DbSet<PageIntro> PageIntros { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products   { get; set; }
+        public DbSet<Bio> Bio { get; set; }
+
 
 
 
