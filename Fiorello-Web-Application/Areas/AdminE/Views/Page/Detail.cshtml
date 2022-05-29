@@ -1,0 +1,17 @@
+﻿@model PageIntro
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminE/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Detail</h1><h1>Id:@Model.Id  ------  Name: @Model.Title</h1>
+<br />
+<br />
+<br />
+<p>@Model.Desc</p>
+ <div style="width:150px;height:100px;"><img src="~/img/@Model.ImageUrl" /></div>
+
+
+<a asp-controller="Page" asp-action="Index" class="btn btn-primary">Back</a>
+
+

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Fiorello_Web_Application.Areas.AdminE.Controllers
 {
-    [Area("AdminE")]
-    public class CategoryController : Controller
+        [Area("AdminE")]
+    public class PageController : Controller
     {
         private readonly AppDbContext _context;
-        public CategoryController(AppDbContext context)
+        public PageController(AppDbContext context)
         {
             _context = context;
         }
         public IActionResult Index()
         {
-            List<Category> categories = _context.Categories.ToList();
-            return View(categories);
+            PageIntro pageIntro = _context.PageIntros.FirstOrDefault();
+            return View(pageIntro);
         }
         public async Task<IActionResult> Detail(int? id)
         {
@@ -26,40 +26,40 @@ namespace Fiorello_Web_Application.Areas.AdminE.Controllers
             {
                 return NotFound();
             }
-            Category categories = await _context.Categories.FindAsync(id);
-            if (categories == null)
+            PageIntro pageIntro = await _context.PageIntros.FindAsync(id);
+            if (pageIntro == null)
             {
                 return NotFound();
             }
-            return View(categories);
+            return View(pageIntro);
         }
-       
+      
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            Category categories = await _context.Categories.FindAsync(id);
-            if (categories == null)
+            PageIntro page = await _context.PageIntros.FindAsync(id);
+            if (page == null)
             {
                 return NotFound();
             }
-            _context.Categories.Remove(categories);
+            _context.PageIntros.Remove(page);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> DeleteAll()
         {
-            List<Category> categories = _context.Categories.ToList();
-            foreach (var item in categories)
+            List<PageIntro> pageIntros = _context.PageIntros.ToList();
+            foreach (var item in pageIntros)
             {
 
-                if (categories == null)
+                if (pageIntros == null)
                 {
                     return NotFound();
                 }
-                _context.Categories.Remove(item);
+                _context.PageIntros.Remove(item);
             }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -71,55 +71,56 @@ namespace Fiorello_Web_Application.Areas.AdminE.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Category category)
+        public async Task<IActionResult> Create(PageIntro pageIntro)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            bool isExistName = _context.Categories.Any(c => c.Name.ToLower() == category.Name.ToLower());
+            bool isExistName = _context.PageIntros.Any(c => c.Title.ToLower() == pageIntro.Title.ToLower());
             if (isExistName)
             {
-                ModelState.AddModelError("Name", "eyni adda name olmaz");
+                ModelState.AddModelError("Title", "eyni adda title olmaz");
                 return View();
             }
-            Category category1 = new Category();
-            category1.Name = category.Name;
-            category1.Desc = category.Desc;
-            await _context.Categories.AddAsync(category1);
+            PageIntro pageIntro1 = new PageIntro();
+            pageIntro1.Title = pageIntro.Title;
+            pageIntro1.Desc= pageIntro.Desc;
+            pageIntro1.ImageUrl= pageIntro.ImageUrl;
+            await _context.PageIntros.AddAsync(pageIntro1);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        public async Task<IActionResult> Updatem(int?id)
+        public async Task<IActionResult> Updatem(int? id)
         {
-            if (id==null)
+            if (id == null)
             {
                 return NotFound();
             }
-            Category dbcategory = await _context.Categories.FindAsync(id);
-            if (dbcategory == null) return BadRequest();
-            return View(dbcategory);
+            PageIntro dbpageIntro = await _context.PageIntros.FindAsync(id);
+            if (dbpageIntro == null) return BadRequest();
+            return View(dbpageIntro);
         }
         [HttpPost]
-        public async Task<IActionResult> Updatem(int? id, Category category)
+        public async Task<IActionResult> Updatem(int? id, PageIntro pageIntro)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            Category dbcategory = await _context.Categories.FindAsync(id);
-            Category existNameCategory=_context.Categories.FirstOrDefault(c => c.Name.ToLower() == category.Name.ToLower());
-            if (existNameCategory!=null)
+            PageIntro dbpageIntro = await _context.PageIntros.FindAsync(id);
+            PageIntro existNamePageintro = _context.PageIntros.FirstOrDefault(c => c.Title.ToLower() == pageIntro.Title.ToLower());
+            if (existNamePageintro != null)
             {
-                if (dbcategory!=existNameCategory)
+                if (dbpageIntro != existNamePageintro)
                 {
                     ModelState.AddModelError("Name", "Name Already Exist");
                     return View();
                 }
             }
-            if (dbcategory == null) return BadRequest();
-            dbcategory.Name = category.Name;
-            dbcategory.Desc = category.Desc;
+            if (dbpageIntro == null) return BadRequest();
+            dbpageIntro.Title = pageIntro.Title;
+            dbpageIntro.Desc = pageIntro.Desc;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

@@ -6,13 +6,12 @@
 }
 
 <div class="row">
-    <div class="col-lg-6 grid-margin stretch-card">
+    <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Category Table</h4>
                 <p class="card-description">
-                    Add class <code>.table</code>
-                </p>
+                <a asp-controller="Category" asp-action="Create" class="btn btn-primary">Create</a>
                 <a asp-controller="Category" asp-action="DeleteAll" class="btn btn-danger">Delete All Data!!</a>
                 <div class="table-responsive">
                     <table class="table">
@@ -34,7 +33,7 @@
                                     <td>@item.Desc</td>
                                     <td>
                                         <a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                                        <a class="btn btn-dark" asp-controller="Category" asp-action="Update" asp-route-id="@item.Id">Updat</a>
+                                        <a class="btn btn-dark" asp-controller="Category" asp-action="Updatem" asp-route-id="@item.Id">Update</a>
                                         <a class="btn btn-success" asp-controller="Category" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
 
                                     </td>

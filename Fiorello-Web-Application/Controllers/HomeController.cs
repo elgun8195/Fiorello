@@ -21,6 +21,7 @@ namespace Fiorello_Web_Application.Controllers
 
             HomeVM homeVM = new HomeVM();
             homeVM.Slider = _context.Sliders.ToList();
+            homeVM.Bio=_context.Bio.FirstOrDefault();
             homeVM.PageIntro = _context.PageIntros.FirstOrDefault();
             homeVM.Products = _context.Products.Include(p=>p.Category).ToList();
             homeVM.Categories=_context.Categories.ToList();

@@ -1,8 +1,4 @@
-$(document).ready(function () {
-    $("#updatebtn").click(function () {
-        alert("salam")
-    });
-});
+
 (function ($) {
   'use strict';
   $(function() {
