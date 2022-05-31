@@ -160,3 +160,6 @@ C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debu
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Page\Updatem.cshtml.g.cs
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Bio\Index.cshtml.g.cs
 C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Slider\Index.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Slider\Create.cshtml.g.cs
+C:\Users\Acer\Desktop\Fiorello-Web-Application\Fiorello-Web-Application\obj\Debug\netcoreapp3.1\Razor\Areas\AdminE\Views\Slider\Updatem.cshtml.g.cs

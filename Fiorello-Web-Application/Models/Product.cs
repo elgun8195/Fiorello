@@ -7,6 +7,8 @@
         public string ImageUrl { get; set; }
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
+        public int TagId { get; set; }
+        public Tag Tag { get; set; }
         public Category Category { get; set; }
     }
 }

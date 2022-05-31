@@ -12,5 +12,6 @@ namespace Fiorello_Web_Application.Models
         [Required(ErrorMessage = "dont empty"), StringLength(50, ErrorMessage = "50dan yux olmaz")]
         public string  Desc { get; set; }
         public IEnumerable<Product> Products { get; set; }
+       
     }
 }
