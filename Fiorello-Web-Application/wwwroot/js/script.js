@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // HEADER
     let skip = 2;
     $(document).on("click", "#loddd", function () {
         let ProductCount = $("#ProductCount").val();
@@ -10,11 +11,22 @@ $(document).ready(function () {
                 $("#listproduct").append(res)
                 if (skip >= ProductCount) {
                     $("#loddd").remove();
-                }   
+                }
             }
         })
     })
-    // HEADER
+    //Searching Product
+    $(document).on("keyup", "#search-input", function () {
+        let inputVal = $(this).val().trim();
+        $("#axtaris li").slice(1).remove(); 
+        $.ajax({
+            method: "get",
+            url: "product/SearchProduct?search=" + inputVal,
+            success: function (res) {
+                console.log(res)
+            }
+        })
+    })
 
     $(document).on('click', '#search', function () {
         $(this).next().toggle();
